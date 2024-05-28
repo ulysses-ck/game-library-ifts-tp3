@@ -6,9 +6,9 @@ export default async function Home() {
     <main>
       <h1>Game Library</h1>
 
-      <ul>
+      <ul className="flex flex-col">
         {games.map((game) => (
-          <li key={game.Rank}>
+          <li className="grid grid-cols-7 " key={game.Rank}>
             <h2>{game.Name}</h2>
             <p>
               <strong>Rank:</strong> {game.Rank}
