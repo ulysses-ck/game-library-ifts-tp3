@@ -14,7 +14,7 @@ export default async function Home() {
     return notFound();
   }
   return (
-    <main>
+    <main className={styles.mainSection}>
       <h1>Proyecto Juegos</h1>
       <ul className={styles.tableUl}>
         <li className={styles.tableHeaders}>

@@ -1,4 +1,3 @@
-/* [&>*:nth-child(odd)]:bg-[#d5e6ea] [&>*:nth-child(even)]:bg-[#e9d3ea] */
 .tableUl li:nth-child(even) {
   background-color: #d5e6ea;
 }
@@ -19,4 +18,11 @@
 
 .tableParagraph {
   text-align: center;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
