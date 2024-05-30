@@ -1,0 +1,13 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #f053e0 0%, #0165fb 100%);
+  color: white;
+  padding: 20px 50px;
+}
+.brandHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
