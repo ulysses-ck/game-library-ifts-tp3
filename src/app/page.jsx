@@ -1,5 +1,8 @@
 import { notFound } from "next/navigation";
+
 import { supabase } from "../supabase";
+
+import styles from "./page.module.css";
 
 export default async function Home() {
   const { data, error } = await supabase
@@ -13,18 +16,18 @@ export default async function Home() {
   return (
     <main>
       <h1>Proyecto Juegos</h1>
-      <ul className="[&>*:nth-child(odd)]:bg-[#d5e6ea] [&>*:nth-child(even)]:bg-[#e9d3ea]">
-        <li className="grid grid-cols-3 items-center bg-gradient-to-r from-[#F053E0] from-0% to-[#0165FB] to-100%">
-          <p className="text-center">ID</p>
-          <p className="text-center">Nombre</p>
-          <p className="text-center">Plataforma</p>
+      <ul className={styles.tableUl}>
+        <li className={styles.tableHeaders}>
+          <p className={styles.tableParagraph}>ID</p>
+          <p className={styles.tableParagraph}>Nombre</p>
+          <p className={styles.tableParagraph}>Plataforma</p>
         </li>
         {data.map((game) => {
           return (
-            <li key={game.Rank} className="grid grid-cols-3 items-center">
-              <p className="text-center">{game.Rank}</p>
-              <p className="text-center">{game.Name}</p>
-              <p className="text-center">{game.Platform}</p>
+            <li key={game.Rank} className={styles.tableData}>
+              <p className={styles.tableParagraph}>{game.Rank}</p>
+              <p className={styles.tableParagraph}>{game.Name}</p>
+              <p className={styles.tableParagraph}>{game.Platform}</p>
             </li>
           );
         })}

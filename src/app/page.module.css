@@ -1,0 +1,22 @@
+/* [&>*:nth-child(odd)]:bg-[#d5e6ea] [&>*:nth-child(even)]:bg-[#e9d3ea] */
+.tableUl li:nth-child(even) {
+  background-color: #d5e6ea;
+}
+.tableUl li:nth-child(odd) {
+  background-color: #e9d3ea;
+}
+
+.tableHeaders,
+.tableData {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.tableHeaders {
+  background: linear-gradient(to right, #f053e0 0%, #0165fb 100%);
+}
+
+.tableParagraph {
+  text-align: center;
+}
