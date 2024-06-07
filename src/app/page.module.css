@@ -1,28 +1,45 @@
-.tableUl li:nth-child(even) {
+.mainSection {
+  padding: 20px;
+}
+
+.tableContainer {
+  margin-top: 20px;
+}
+
+.table {
   background-color: #d5e6ea;
-}
-.tableUl li:nth-child(odd) {
-  background-color: #e9d3ea;
-}
-
-.tableHeaders,
-.tableData {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.tableHeaders {
-  background: linear-gradient(to right, #f053e0 0%, #0165fb 100%);
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.tableParagraph {
+.table th {
+  background-color: #d8bbda;
   text-align: center;
 }
 
-.mainSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+.table tr:nth-child(even) {
+  background-color: #e9d3ea;
+}
+
+.table tr:hover {
+  background-color: #d8bbda;
+}
+
+.editButton, .deleteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.editButton {
+  color: yellow;
+}
+
+.deleteButton {
+  color: red;
 }
