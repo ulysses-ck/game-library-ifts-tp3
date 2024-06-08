@@ -1,12 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { supabase } from "../../supabase";
-
 export default async function EditPage() {
-  const { data, error } = await supabase
-  .from("games")
-  .select("Rank, Platform, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales, Global_Sales")
-  .limit(10)
 
   if (error) {
     return notFound();
