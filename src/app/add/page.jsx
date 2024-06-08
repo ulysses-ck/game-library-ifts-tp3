@@ -1,10 +1,4 @@
-import { notFound } from "next/navigation";
-
 export default async function AddPage() {
-  if (error) {
-    return notFound();
-  }
-
   const platforms = [
     '2600', '3DS',  'DC',   'DS',
     'GB',   'GBA',  'GC',   'GEN',
