@@ -89,10 +89,26 @@ export async function editGame(formData) {
 }
 
 export async function searchGame(initialState, formData) {
-  console.log("searchGame");
-  console.log(formData);
-
   const queryName = formData.get("Name");
+  const queryString = `%${queryName}%`;
 
-  return { queryName };
+  const { data, error } = await supabase
+    .from("games")
+    .select(
+      "Rank, Platform, Name, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales"
+    )
+    .like("Name", queryString);
+  console.log("data");
+  console.log(data);
+  console.log("error");
+  console.log(error);
+
+  if (error) {
+    return {
+      status: 500,
+      body: error,
+    };
+  }
+
+  return { status: 200, body: { queryName, data } };
 }
