@@ -1,11 +1,12 @@
 import { genres, platforms, publishers, years } from "@/data";
+import { addNewGame } from "../actions";
 
 export default async function AddPage() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-200 to-blue-200 p-4">
       <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6">Agregar juego</h1>
-        <form>
+        <form action={addNewGame} >
           <label className="block mb-2 text-gray-700" htmlFor="Name">
             Nombre del juego
           </label>
