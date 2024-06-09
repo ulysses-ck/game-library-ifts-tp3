@@ -2,6 +2,7 @@ import styles from "./Footer.module.css";
 import ImageContainer from "../ImageContainer";
 import Image from "next/image";
 import imgLogo from "../../../public/b641409e68c926216258f38c03c32ada.png";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -15,10 +16,10 @@ export default function Footer() {
             <div className={styles.menu}>
                 <p>Menu</p>
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Agregar Juego</a></li>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><Link  href={`/`}>Inicio</Link></li>
+                    <li><Link  href={`/add`}>Agregar Juego</Link></li>
+                    <li><Link  href={`/about`}>Acerca de</Link></li>
+                    <li><Link  href={`/contact`}>Contacto</Link></li>
                 </ul>
             </div>
 
