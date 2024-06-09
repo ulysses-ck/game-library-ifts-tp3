@@ -87,3 +87,12 @@ export async function editGame(formData) {
     body: data,
   };
 }
+
+export async function searchGame(initialState, formData) {
+  console.log("searchGame");
+  console.log(formData);
+
+  const queryName = formData.get("Name");
+
+  return { queryName };
+}
