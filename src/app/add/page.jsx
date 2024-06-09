@@ -1,17 +1,4 @@
-import { notFound } from "next/navigation";
-
-import { supabase } from "../../supabase";
-
 export default async function AddPage() {
-  const { data, error } = await supabase
-  .from("games")
-  .select("Rank, Platform, Year, Genre, Publisher")
-  .limit(10)
-
-  if (error) {
-    return notFound();
-  }
-
   const platforms = [
     '2600', '3DS',  'DC',   'DS',
     'GB',   'GBA',  'GC',   'GEN',
