@@ -1,6 +1,8 @@
 import { supabase } from "@/supabase";
 import { notFound } from "next/navigation";
 
+import { genres, platforms, publishers, years } from "@/data";
+
 export default async function EditPage({ params }) {
   const { data, error } = await supabase
     .from("games")
