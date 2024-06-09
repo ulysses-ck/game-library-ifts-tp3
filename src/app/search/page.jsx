@@ -1,7 +1,5 @@
+import SearchBar from "@/components/SearchBar";
 import styles from "./page.module.css";
-import dynamic from "next/dynamic";
-
-const SearchBar = dynamic(() => import("@/components/SearchBar"));
 
 export default function SearchPage() {
   return (
