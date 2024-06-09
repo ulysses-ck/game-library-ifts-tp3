@@ -20,7 +20,7 @@ export default function Header() {
         <h2>Proyecto Videojuegos</h2>
       </div>
       <nav className="flex">
-        <ul className="flex justify-around gap-1">
+        <ul className="flex justify-around gap-6">
           {navLinks.map((navLink) => {
             return (
               <li key={navLink.title} className="capitalize">
