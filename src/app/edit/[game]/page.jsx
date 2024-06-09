@@ -20,14 +20,14 @@ export default async function EditPage({ params }) {
         <h1 className="text-2xl font-bold text-center mb-6">Editar juego</h1>
         <form action={editGame}>
           <input type="hidden" name="Rank" value={data[0].Rank} />
-          <label className="block mb-2 text-gray-700" htmlFor="nombre">
+          <label className="block mb-2 text-gray-700" htmlFor="Name">
             Nombre del juego
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="text"
-            id="nombre"
-            name="nombre"
+            id="Name"
+            name="Name"
             defaultValue={data[0].Name}
             placeholder="Ingrese nombre del juego"
           />
@@ -37,8 +37,8 @@ export default async function EditPage({ params }) {
           </label>
           <select
             className="w-full p-2 mb-4 border border-gray-300 rounded"
-            id="plataforma"
-            name="plataforma"
+            id="Platform"
+            name="Platform"
             defaultValue={data[0].Platform}
           >
             {platforms.map((platform) => (
@@ -48,13 +48,13 @@ export default async function EditPage({ params }) {
             ))}
           </select>
 
-          <label className="block mb-2 text-gray-700" htmlFor="año">
+          <label className="block mb-2 text-gray-700" htmlFor="Year">
             Año
           </label>
           <select
             className="w-full p-2 mb-4 border border-gray-300 rounded"
-            id="año"
-            name="año"
+            id="Year"
+            name="Year"
             defaultValue={data[0].Year}
           >
             {years.map((year) => (
@@ -64,13 +64,13 @@ export default async function EditPage({ params }) {
             ))}
           </select>
 
-          <label className="block mb-2 text-gray-700" htmlFor="genero">
+          <label className="block mb-2 text-gray-700" htmlFor="Genre">
             Género
           </label>
           <select
             className="w-full p-2 mb-4 border border-gray-300 rounded"
-            id="genero"
-            name="genero"
+            id="Genre"
+            name="Genre"
             defaultValue={data[0].Genre}
           >
             {genres.map((genre) => (
@@ -80,13 +80,13 @@ export default async function EditPage({ params }) {
             ))}
           </select>
 
-          <label className="block mb-2 text-gray-700" htmlFor="desarrollador">
+          <label className="block mb-2 text-gray-700" htmlFor="Publisher">
             Desarrollador
           </label>
           <select
             className="w-full p-2 mb-4 border border-gray-300 rounded"
-            id="desarrollador"
-            name="desarrollador"
+            id="Publisher"
+            name="Publisher"
             defaultValue={data[0].Publisher}
           >
             {publishers.map((publisher) => (
@@ -96,50 +96,50 @@ export default async function EditPage({ params }) {
             ))}
           </select>
 
-          <label className="block mb-2 text-gray-700" htmlFor="ventas">
+          <label className="block mb-2 text-gray-700" htmlFor="NA_Sales">
             Ventas en Norteamérica
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
-            id="ventas"
-            name="ventas"
+            id="NA_Sales"
+            name="NA_Sales"
             placeholder="Ingrese el total de ventas"
             defaultValue={data[0].NA_Sales}
           />
 
-          <label className="block mb-2 text-gray-700" htmlFor="ventas">
+          <label className="block mb-2 text-gray-700" htmlFor="EU_Sales">
             Ventas en Europa
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
-            id="ventas"
-            name="ventas"
+            id="EU_Sales"
+            name="EU_Sales"
             placeholder="Ingrese el total de ventas"
             defaultValue={data[0].EU_Sales}
           />
 
-          <label className="block mb-2 text-gray-700" htmlFor="ventas">
+          <label className="block mb-2 text-gray-700" htmlFor="JP_Sales">
             Ventas en Japón
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
-            id="ventas"
-            name="ventas"
+            id="JP_Sales"
+            name="JP_Sales"
             placeholder="Ingrese el total de ventas"
             defaultValue={data[0].JP_Sales}
           />
 
-          <label className="block mb-2 text-gray-700" htmlFor="ventas">
+          <label className="block mb-2 text-gray-700" htmlFor="Other_Sales">
             Otras ventas
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
-            id="ventas"
-            name="ventas"
+            id="Other_Sales"
+            name="Other_Sales"
             placeholder="Ingrese el total de ventas"
             defaultValue={data[0].Other_Sales}
           />
