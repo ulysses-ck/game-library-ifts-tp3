@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { supabase } from "../supabase";
 
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default async function Home() {
   const { data, error } = await supabase
@@ -40,7 +41,7 @@ export default async function Home() {
                 <td>{game.Publisher}</td>
                 <td>{game.Sales}</td>
                 <td>
-                  <button className={styles.editButton}>✏️</button>
+                  <Link className={styles.editButton} href={`/edit/${game.Rank}`}>✏️</Link>
                   <button className={styles.deleteButton}>🗑️</button>
                 </td>
               </tr>
