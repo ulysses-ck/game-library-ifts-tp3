@@ -98,10 +98,6 @@ export async function searchGame(initialState, formData) {
       "Rank, Platform, Name, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales"
     )
     .like("Name", queryString);
-  console.log("data");
-  console.log(data);
-  console.log("error");
-  console.log(error);
 
   if (error) {
     return {
