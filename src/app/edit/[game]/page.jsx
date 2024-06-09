@@ -2,6 +2,7 @@ import { supabase } from "@/supabase";
 import { notFound } from "next/navigation";
 
 import { genres, platforms, publishers, years } from "@/data";
+import { editGame } from "@/app/actions";
 
 export default async function EditPage({ params }) {
   const { data, error } = await supabase
@@ -17,7 +18,8 @@ export default async function EditPage({ params }) {
     <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-200 to-blue-200 p-4">
       <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6">Editar juego</h1>
-        <form>
+        <form action={editGame}>
+          <input type="hidden" name="Rank" value={data[0].Rank} />
           <label className="block mb-2 text-gray-700" htmlFor="nombre">
             Nombre del juego
           </label>
