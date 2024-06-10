@@ -46,16 +46,18 @@ export default async function Home() {
                 <td>{game.Publisher}</td>
                 <td>{game.Sales}</td>
                 <td>
-                  <Link
-                    className={styles.editButton}
-                    href={`/edit/${game.Rank}`}
-                  >
-                    ✏️
-                  </Link>
-                  <form action={deleteGame}>
-                    <input type="hidden" name="Rank" value={game.Rank} />
-                    <button className={styles.deleteButton}>🗑️</button>
-                  </form>
+                  <div className={styles.ActionButtons}>
+                    <Link
+                      className={styles.editButton}
+                      href={`/edit/${game.Rank}`}
+                    >
+                      ✏️
+                    </Link>
+                    <form action={deleteGame}>
+                      <input type="hidden" name="Rank" value={game.Rank} />
+                      <button className={styles.deleteButton}>🗑️</button>
+                    </form>
+                  </div>
                 </td>
               </tr>
             ))}

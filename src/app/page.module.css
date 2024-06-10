@@ -43,3 +43,7 @@
 .deleteButton {
   color: red;
 }
+
+.ActionButtons{
+  display: flex;
+}
