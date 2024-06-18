@@ -1,26 +1,47 @@
+"use client";
 import { notFound } from "next/navigation";
-
-import { supabase } from "../supabase";
+import { useFormState } from "react-dom";
 
 import styles from "./page.module.css";
 import Link from "next/link";
 
-import { deleteGame } from "./actions";
+import { deleteGame, getGames } from "./actions";
+import { useEffect, useState } from "react";
 
-export default async function Home() {
-  const { data, error } = await supabase
-    .from("games")
-    .select(
-      "Rank, Platform, Name, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales"
-    )
-    .limit(10)
-    .order("Rank", { ascending: false });
+export default function Home() {
+  const [state, formAction] = useFormState(getGames, { data: [] });
+  const [limit, setLimit] = useState(10);
 
-  if (error) {
-    return notFound();
-  }
+  const handleOnInput = (e) => {
+    const limit = e.target.value;
+    setLimit(limit);
+  };
+
+  useEffect(() => {
+    if (limit) {
+      const formData = new FormData();
+      formData.append("limit", limit);
+      formAction(formData);
+      console.log(state);
+    }
+  }, [limit]);
+
   return (
     <main className={styles.mainSection}>
+      <div>
+        <label htmlFor="limit">
+          Mostrar
+          <input
+            type="number"
+            id="limit"
+            onInput={handleOnInput}
+            value={limit}
+            className="border border-black"
+          />
+          entradas
+        </label>
+      </div>
+
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
@@ -36,7 +57,7 @@ export default async function Home() {
             </tr>
           </thead>
           <tbody>
-            {data.map((game) => (
+            {state.data.map((game) => (
               <tr key={game.Rank}>
                 <td>{game.Rank}</td>
                 <td>{game.Name}</td>
