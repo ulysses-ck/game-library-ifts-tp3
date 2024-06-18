@@ -1,5 +1,4 @@
 "use client";
-import { notFound } from "next/navigation";
 import { useFormState } from "react-dom";
 
 import styles from "./page.module.css";
