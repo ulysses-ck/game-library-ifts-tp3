@@ -1,0 +1,29 @@
+.notificacionGreen{
+    background-color: #53f4505c;
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.textNotification{
+    margin-left: 20px;
+}
+.imgNotification{
+    width: 30px;
+    display: flex;
+}
+.btnNotification{
+    border-style: none;
+    background-color: transparent;
+    margin-right: 20px;
+}
+
+.notificacionRed{
+    background-color: #f4505082;
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
