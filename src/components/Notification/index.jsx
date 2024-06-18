@@ -1,44 +1,20 @@
 import styles from "./Notification.module.css";
+import closeSVG from "../../../public/close-icon.svg";
+import Image from "next/image";
 
-
-export default function Notification() {
-  return(
-    <>
-    <div className={styles.notificacionGreen}>
-      <p className={styles.textNotification}>Juego agregado exitosamente</p>
-      <button className={styles.btnNotification}><img className={styles.imgNotification} src="../../../public/close-icon.svg" /></button>
+export default function Notification({ action, isSuccess }) {
+  return (
+    <div
+      className={isSuccess ? styles.notificacionGreen : styles.notificacionRed}
+    >
+      <p className={styles.textNotification}>
+        {isSuccess
+          ? `Éxito al ${action} Juego`
+          : `Error al ${action} Juego`}
+      </p>
+      <button className={styles.btnNotification}>
+        <Image className={styles.imgNotification} src={closeSVG} alt="Close" />
+      </button>
     </div>
-
-    <div className={styles.notificacionGreen}>
-        <p className={styles.textNotification}>Juego modificado exitosamente</p>
-        <button className={styles.btnNotification}><img className={styles.imgNotification} src="../../../public/close-icon.svg" /></button>
-    </div>
-
-    <div className={styles.notificacionGreen}>
-        <p className={styles.textNotification}>Juego eliminado exitosamente</p>
-        <button className={styles.btnNotification}><img className={styles.imgNotification} src="../../../public/close-icon.svg" /></button>
-    </div>
-
-    <div className={styles.notificacionRed}>
-      <p className={styles.textNotification}>Error al agregar un juego</p>
-      <button className={styles.btnNotification}><img className={styles.imgNotification} src="../../../public/close-icon.svg" /></button>
-    </div>
-
-    <div className={styles.notificacionRed}>
-        <p className={styles.textNotification}>Error al modificar un juego</p>
-        <button className={styles.btnNotification}><img className={styles.imgNotification} src="../../../public/close-icon.svg" /></button>
-    </div>
-
-    <div className={styles.notificacionRed}>
-        <p className={styles.textNotification}>Error al eliminar un juego</p>
-        <button className={styles.btnNotification}><img className={styles.imgNotification} src="../../../public/close-icon.svg" /></button>
-    </div>
-    
-    
-    </>
-  
-  
-  
-  
   );
 }
