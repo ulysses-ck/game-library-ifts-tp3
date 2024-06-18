@@ -87,3 +87,31 @@ export async function editGame(formData) {
     body: data,
   };
 }
+
+export async function getGames(_, formData) {
+  const rawFormData = {
+    offset: formData.get("offset") || 0,
+    limit: formData.get("limit") || 10,
+    ascending: formData.get("ascending") || false,
+  };
+
+  const { data, error } = await supabase
+    .from("games")
+    .select(
+      "Rank, Platform, Name, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales"
+    )
+    .range(rawFormData.offset, rawFormData.offset + rawFormData.limit - 1)
+    .order("Rank", { ascending: rawFormData.ascending });
+
+  if (error) {
+    return {
+      status: 500,
+      body: error,
+    };
+  }
+
+  return {
+    status: 200,
+    data,
+  };
+}
