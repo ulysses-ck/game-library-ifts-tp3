@@ -36,7 +36,7 @@ export async function addNewGame(_, formData) {
   };
 }
 
-export async function deleteGame(formData) {
+export async function deleteGame(_, formData) {
   const { data, error } = await supabase
     .from("games")
     .delete()
@@ -109,6 +109,8 @@ export async function getGames(_, formData) {
       body: error,
     };
   }
+
+  revalidatePath("/", "layout");
 
   return {
     status: 200,
