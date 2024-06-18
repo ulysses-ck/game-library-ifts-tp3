@@ -3,7 +3,7 @@
 import { supabase } from "@/supabase";
 import { revalidatePath } from "next/cache";
 
-export async function addNewGame(_,formData) {
+export async function addNewGame(_, formData) {
   const rawFormData = {
     Name: formData.get("Name"),
     Platform: formData.get("Platform"),
@@ -56,7 +56,7 @@ export async function deleteGame(formData) {
   };
 }
 
-export async function editGame(formData) {
+export async function editGame(_, formData) {
   const rawFormData = {
     Rank: formData.get("Rank"),
     Name: formData.get("Name"),
