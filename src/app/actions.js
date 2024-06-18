@@ -3,7 +3,7 @@
 import { supabase } from "@/supabase";
 import { revalidatePath } from "next/cache";
 
-export async function addNewGame(formData) {
+export async function addNewGame(_,formData) {
   const rawFormData = {
     Name: formData.get("Name"),
     Platform: formData.get("Platform"),
@@ -90,9 +90,9 @@ export async function editGame(formData) {
 
 export async function getGames(_, formData) {
   const rawFormData = {
-    offset: formData.get("offset") || 10,
+    offset: formData.get("offset") || 0,
     limit: formData.get("limit") || 10,
-    ascending: formData.get("ascending") || true,
+    ascending: formData.get("ascending") || false,
   };
 
   const { data, error } = await supabase
