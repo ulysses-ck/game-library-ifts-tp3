@@ -90,9 +90,9 @@ export async function editGame(formData) {
 
 export async function getGames(_, formData) {
   const rawFormData = {
-    offset: formData.get("offset") || 0,
+    offset: formData.get("offset") || 10,
     limit: formData.get("limit") || 10,
-    ascending: formData.get("ascending") || false,
+    ascending: formData.get("ascending") || true,
   };
 
   const { data, error } = await supabase
@@ -101,8 +101,8 @@ export async function getGames(_, formData) {
       "Rank, Platform, Name, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales"
     )
     .range(rawFormData.offset, rawFormData.offset + rawFormData.limit - 1)
-    .order("Rank", { ascending: rawFormData.ascending });
-
+    .order("Rank", { ascending: rawFormData.ascending })
+    .limit(rawFormData.limit);
   if (error) {
     return {
       status: 500,
