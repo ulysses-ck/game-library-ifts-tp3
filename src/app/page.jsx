@@ -11,7 +11,12 @@ import PaginationButtons from "@/components/PaginationButtons";
 import FormEntries from "@/components/FormEntries";
 
 export default function Home() {
-  const [state, formAction] = useFormState(getGames, { data: [] }); // Asegúrate de inicializar state.data como un arreglo vacío
+  const [state, formAction] = useFormState(getGames, {
+    data: [],
+    limit: 10,
+    offset: 0,
+    ascending: true,
+  }); // Asegúrate de inicializar state.data como un arreglo vacío
 
   return (
     <main className={styles.mainSection}>
@@ -56,7 +61,7 @@ export default function Home() {
           </tbody>
         </table>
       </div>
-      <PaginationButtons />
+      <PaginationButtons limit={state.limit} offset={state.offset} formAction={formAction} />
     </main>
   );
 }
