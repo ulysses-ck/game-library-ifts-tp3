@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getGames } from "./actions";
 import { useEffect, useState } from "react";
 import ButtonDelete from "@/components/ButtonDelete";
-import PaginationButtons from "@/components/PaginationsButtons";
+import PaginationButtons from "@/components/PaginationButtons";
 
 export default function Home() {
   const [state, formAction] = useFormState(getGames, { data: [] }); // Asegúrate de inicializar state.data como un arreglo vacío
