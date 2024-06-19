@@ -1,46 +1,21 @@
 "use client";
 import { useFormState } from "react-dom";
+
 import styles from "./page.module.css";
 import Link from "next/link";
+
 import { getGames } from "./actions";
-import { useEffect, useState } from "react";
+
 import ButtonDelete from "@/components/ButtonDelete";
 import PaginationButtons from "@/components/PaginationButtons";
+import FormEntries from "@/components/FormEntries";
 
 export default function Home() {
   const [state, formAction] = useFormState(getGames, { data: [] }); // Asegúrate de inicializar state.data como un arreglo vacío
-  const [limit, setLimit] = useState(10);
-
-  const handleOnInput = (e) => {
-    const limit = e.target.value;
-    setLimit(limit);
-  };
-
-  useEffect(() => {
-    if (limit) {
-      const formData = new FormData();
-      formData.append("limit", limit);
-      formAction(formData);
-      console.log(state);
-    }
-  }, [limit]);
 
   return (
     <main className={styles.mainSection}>
-      <div>
-        <label htmlFor="limit">
-          Mostrar
-          <input
-            type="number"
-            id="limit"
-            onInput={handleOnInput}
-            value={limit}
-            className="border border-black"
-          />
-          entradas
-        </label>
-      </div>
-
+      <FormEntries formAction={formAction} />
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
