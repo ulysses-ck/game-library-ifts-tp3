@@ -1,13 +1,13 @@
 import styles from "./PaginationButtons.module.css";
 
-export default function PaginationButtons () {
-    return (
-        <div class={styles.pagination}>
-            <div class={styles.container}>
-                <a href="#">Anterior</a>
-                <a href="#" class="active">1</a>
-                <a href="#">Siguiente</a>
-            </div>
-        </div>
-    );
+export default function PaginationButtons() {
+  return (
+    <div className={styles.pagination}>
+      <div className={styles.container}>
+        <button className={styles.btn}>Anterior</button>
+        <span className={styles.btn}>1</span>
+        <button className={styles.btn}>Siguiente</button>
+      </div>
+    </div>
+  );
 }

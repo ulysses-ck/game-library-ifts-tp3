@@ -7,7 +7,7 @@
     float: right;
 }
 
-.container a {  
+.btn  {  
     color: black;
     padding: 8px 16px;
     text-decoration: none;
@@ -16,6 +16,6 @@
     margin: 0 4px;
 }
 
-.container a:hover {
+.btn:hover {
     background-color: #a1f7eb;
 }
