@@ -7,6 +7,7 @@ export default function Header() {
   const navLinks = [
     { title: "Inicio", path: "/" },
     { title: "Agregar juego", path: "/add" },
+    { title: "Buscar juego", path: "/search" },
     { title: "Acerca de", path: "/about" },
     { title: "Contacto", path: "/contact" },
   ];

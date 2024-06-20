@@ -47,4 +47,5 @@
 
 .ActionButtons {
   display: flex;
+  justify-content: center;
 }
