@@ -52,7 +52,7 @@ export default function page() {
         <div className={styles.secondaryContainer}>
           <img src="nicolas.png" className= {styles.imageShape}/>
           <div className={styles.nameStyle}>Nicolas Reparas</div>
-          <div className={styles.nameStyle}>Full Stack Developer</div>
+          <div className={styles.nameStyle}>Software Developer</div>
           <div>
           <div class={styles.socialFollow}>
             <div class={styles.thirdContainer}>

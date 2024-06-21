@@ -19,8 +19,8 @@
 }
 
 .mainContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr)
+    display: flex;
+    justify-content: space-around;
 }
 
 .secondaryContainer{
@@ -41,7 +41,6 @@
     justify-content: center;
     font-size: 17px;
     font-weight: bold;
-    
 }
 
 .logoSize{
