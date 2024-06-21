@@ -18,6 +18,7 @@ export default function Footer() {
                 <ul>
                     <li><Link  href={`/`}>Inicio</Link></li>
                     <li><Link  href={`/add`}>Agregar Juego</Link></li>
+                    <li><Link  href={`/search`}>Buscar Juego</Link></li>
                     <li><Link  href={`/about`}>Acerca de</Link></li>
                     <li><Link  href={`/contact`}>Contacto</Link></li>
                 </ul>
