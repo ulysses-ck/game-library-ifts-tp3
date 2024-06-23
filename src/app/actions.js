@@ -130,7 +130,7 @@ export async function searchGame(initialState, formData) {
     .select(
       "Rank, Platform, Name, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Other_Sales"
     )
-    .like("Name", queryString);
+    .ilike("Name", queryString);
 
   if (error) {
     return {
