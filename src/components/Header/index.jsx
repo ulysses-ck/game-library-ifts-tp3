@@ -7,6 +7,7 @@ import ImageContainer from "../ImageContainer";
 import styles from "./Header.module.css";
 import Link from "next/link";
 import { FaBars } from "react-icons/fa";
+import { GrClose } from "react-icons/gr";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function Header() {
         className={styles.menuIcon}
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <FaBars />
+        {menuOpen ? <GrClose /> : <FaBars />}
       </button>
       <nav className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
         <ul>
