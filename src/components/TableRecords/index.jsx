@@ -32,7 +32,7 @@ export default function TableRecords({ data }) {
             <td>{game.Genre}</td>
             <td>{game.Publisher}</td>
             <td>{game.NA_Sales ? `${game.NA_Sales} M` : "No especificado"}</td>
-            <td>{game.EU_Sales ? `${game.EU_SalesE} M` : "No especificado"}</td>
+            <td>{game.EU_Sales ? `${game.EU_Sales} M` : "No especificado"}</td>
             <td>{game.JP_Sales ? `${game.JP_Sales} M` : "No especificado"}</td>
             <td>
               {game.Other_Sales ? `${game.Other_Sales} M` : "No especificado"}
