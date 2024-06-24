@@ -14,7 +14,11 @@ export default function TableRecords({ data }) {
           <th>Año</th>
           <th>Género</th>
           <th>Desarrollador</th>
-          <th>Ventas</th>
+          <th>Ventas Norte America</th>
+          <th>Ventas Europa</th>
+          <th>Ventas Japón</th>
+          <th>Otras Ventas</th>
+          <th>Ventas Globales</th>
           <th>Acción</th>
         </tr>
       </thead>
@@ -27,13 +31,11 @@ export default function TableRecords({ data }) {
             <td>{game.Year}</td>
             <td>{game.Genre}</td>
             <td>{game.Publisher}</td>
-            <td>
-                {parseFloat(game.NA_Sales) +
-                  parseFloat(game.EU_Sales) +
-                  parseFloat(game.JP_Sales) +
-                  parseFloat(game.Other_Sales)}{" "}
-                M
-              </td>
+            <td>{game.NA_Sales}</td>
+            <td>{game.EU_Sales}</td>
+            <td>{game.JP_Sales}</td>
+            <td>{game.Other_Sales}</td>
+            <td>{game.Global_Sales}</td>
             <td>
                 <div className={styles.ActionButtons}>
                     <Link className={styles.editButton} href={`/edit/${game.Rank}`}>
