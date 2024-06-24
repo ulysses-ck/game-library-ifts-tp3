@@ -4,6 +4,7 @@
 
 .tableContainer {
   margin-top: 20px;
+  overflow-x: auto;
 }
 
 .table {
@@ -15,6 +16,7 @@
 .table th,
 .table td {
   border: 1px solid #ddd;
+  text-align: center;
   padding: 8px;
 }
 
@@ -35,9 +37,6 @@
   background: none;
   border: none;
   cursor: pointer;
-}
-
-.editButton {
   color: yellow;
 }
 
@@ -48,4 +47,29 @@
 .ActionButtons {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 200px) {
+  .table th,
+  .table td {
+    padding: 6px;
+  }
+
+  .table tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .table tr th,
+  .table tr td {
+    display: block;
+    text-align: right;
+  }
+
+  .table tr th::before,
+  .table tr td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
 }

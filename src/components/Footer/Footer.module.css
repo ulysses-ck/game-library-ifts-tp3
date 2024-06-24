@@ -3,18 +3,24 @@
     color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 30vh;
     grid-template-areas: "imagen menu";
+    padding: 20px;
 }
 
-.brandFooter{
+.brandFooter {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-area: imagen;
+    text-align: center;
 }
 
-.menu{
+.brandFooter h2 {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.menu {
     grid-area: menu;
     display: flex;
     flex-direction: column;
@@ -22,10 +28,38 @@
     align-items: center;
 }
 
-.menu p{
+.menu p {
     margin-bottom: 10px;
     border-bottom: 2px solid white;
 }
-.menu li{
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
     margin-bottom: 2px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 8px 12px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 780px) {
+    .footerContainer {
+        grid-template-rows: auto;
+    }
+
+    .brandFooter h2 {
+        font-size: 1.5rem;
+    }
 }

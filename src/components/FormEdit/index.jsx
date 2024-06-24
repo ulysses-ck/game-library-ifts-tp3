@@ -94,50 +94,50 @@ export default function FormEdit({ data }) {
           </select>
 
           <label className="block mb-2 text-gray-700" htmlFor="NA_Sales">
-            Ventas en Norteamérica
+            Ventas en Norteamérica (M)
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
             id="NA_Sales"
             name="NA_Sales"
-            placeholder="Ingrese el total de ventas"
+            placeholder="Ingrese el total en millones"
             defaultValue={data[0].NA_Sales}
           />
 
           <label className="block mb-2 text-gray-700" htmlFor="EU_Sales">
-            Ventas en Europa
+            Ventas en Europa (M)
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
             id="EU_Sales"
             name="EU_Sales"
-            placeholder="Ingrese el total de ventas"
+            placeholder="Ingrese el total en millones"
             defaultValue={data[0].EU_Sales}
           />
 
           <label className="block mb-2 text-gray-700" htmlFor="JP_Sales">
-            Ventas en Japón
+            Ventas en Japón (M)
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
             id="JP_Sales"
             name="JP_Sales"
-            placeholder="Ingrese el total de ventas"
+            placeholder="Ingrese el total en millones"
             defaultValue={data[0].JP_Sales}
           />
 
           <label className="block mb-2 text-gray-700" htmlFor="Other_Sales">
-            Otras ventas
+            Otras ventas (M)
           </label>
           <input
             className="w-full p-2 mb-4 border border-gray-300 rounded"
             type="number"
             id="Other_Sales"
             name="Other_Sales"
-            placeholder="Ingrese el total de ventas"
+            placeholder="Ingrese el total en millones"
             defaultValue={data[0].Other_Sales}
           />
 

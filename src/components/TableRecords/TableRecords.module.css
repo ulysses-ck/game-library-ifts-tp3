@@ -1,43 +1,43 @@
 .tableContainer {
     margin-top: 20px;
   }
-  
+
   .table {
     background-color: #d5e6ea;
     width: 100%;
     border-collapse: collapse;
   }
-  
+
   .table th,
   .table td {
     border: 1px solid #ddd;
     padding: 8px;
   }
-  
+
   .table th {
     background-color: #d8bbda;
     text-align: center;
   }
-  
+
   .table tr:nth-child(even) {
     background-color: #e9d3ea;
   }
-  
+
   .table tr:hover {
     background-color: #d8bbda;
   }
-  
+
   .editButton,
   .deleteButton {
     background: none;
     border: none;
     cursor: pointer;
   }
-  
+
   .editButton {
     color: yellow;
   }
-  
+
   .deleteButton {
     color: red;
   }

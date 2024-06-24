@@ -92,7 +92,7 @@ export async function getGames(_, formData) {
   const rawFormData = {
     offset: formData.get("offset") || 0,
     limit: formData.get("limit") || 10,
-    ascending: formData.get("ascending") || true,
+    ascending: formData.get("ascending") || false,
   };
 
   const { data, error } = await supabase

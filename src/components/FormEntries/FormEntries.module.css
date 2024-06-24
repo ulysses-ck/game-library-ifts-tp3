@@ -1,0 +1,28 @@
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.label {
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #333;
+}
+
+.input {
+  width: 60px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    align-items: flex-start;
+  }
+}

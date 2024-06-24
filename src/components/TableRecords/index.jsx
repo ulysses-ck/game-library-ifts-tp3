@@ -27,7 +27,13 @@ export default function TableRecords({ data }) {
             <td>{game.Year}</td>
             <td>{game.Genre}</td>
             <td>{game.Publisher}</td>
-            <td>{game.Sales}</td>
+            <td>
+                {parseFloat(game.NA_Sales) +
+                  parseFloat(game.EU_Sales) +
+                  parseFloat(game.JP_Sales) +
+                  parseFloat(game.Other_Sales)}{" "}
+                M
+              </td>
             <td>
                 <div className={styles.ActionButtons}>
                     <Link className={styles.editButton} href={`/edit/${game.Rank}`}>

@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export default function FormEntries({formAction}) {
+import styles from "./FormEntries.module.css";
+
+export default function FormEntries({ formAction }) {
   const [limit, setLimit] = useState(10);
 
   const handleOnInput = (e) => {
@@ -18,18 +20,18 @@ export default function FormEntries({formAction}) {
   }, [limit]);
 
   return (
-    <div>
-      <label htmlFor="limit">
+    <div className={styles.formContainer}>
+      <label htmlFor="limit" className={styles.label}>
         Mostrar
-        <input
-          type="number"
-          id="limit"
-          onInput={handleOnInput}
-          value={limit}
-          className="border border-black"
-        />
-        entradas
       </label>
+      <input
+        type="number"
+        id="limit"
+        onInput={handleOnInput}
+        value={limit}
+        className={styles.input}
+      />
+      <span className={styles.label}>entradas</span>
     </div>
   );
 }
