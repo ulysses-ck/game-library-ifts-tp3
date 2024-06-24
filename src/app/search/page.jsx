@@ -6,7 +6,9 @@ export default function SearchPage() {
     <main className={styles.SearchPage}>
       <h1 className="text-2xl">Buscar juego por nombre</h1>
 
-      <SearchBar />
+      <div className="overflow-x-scroll relative max-w-full">
+        <SearchBar />
+      </div>
     </main>
   );
 }
